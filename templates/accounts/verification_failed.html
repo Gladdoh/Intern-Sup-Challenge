@@ -1,0 +1,23 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+{% block title %}Verification Failed{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="auth-box">
+        <h2>Verification Failed</h2>
+        <p>The verification link is invalid or has expired.</p>
+        <p>If you're trying to verify your email address, please try the following:</p>
+        <ul>
+            <li>Check that you're using the most recent verification link sent to your email.</li>
+            <li>Try logging in to request a new verification link.</li>
+            <li>Contact support if you continue to have issues.</li>
+        </ul>
+        
+        <div class="auth-links">
+            <a href="{% url 'login' %}" class="btn btn-primary">Back to Login</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
