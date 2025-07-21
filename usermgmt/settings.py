@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+import certifi
+os.environ['SSL_CERT_FILE'] = certifi.where()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -34,7 +36,8 @@ SECRET_KEY = 'django-insecure-@u-zy_ryzmt&dqo43oi624gt&h6k1k$i#ufkl0whds8+f0nbqu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.1.100']  # Add your IP address here
+ALLOWED_HOSTS = ['localhost', '127.0.0.1',
+                 '192.168.1.100']  # Add your IP address here
 
 
 # Site Configuration
